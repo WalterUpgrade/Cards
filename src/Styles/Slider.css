@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .slider-container {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 430px) {
+    .slider-container {
+      min-width: calc(100% / 2);
+
+        width: 100%;
+        left: 1rem;
+    }
+}
+  
+  .left-panel {
+    display: flex;
+    background-color: #006400;
+    width: 40%;
+    min-height: 800px;
+    padding: 0 18px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .left-panel h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .slider-wrapper {
+    display: flow;
+    width: 55%;
+    position: relative;
+    overflow: hidden;
+    top: 116px;
+    z-index: 2;
+  }
+
+  @media (min-width: 430px) {
+    .slider-wrapper {
+      margin-left: -88px;
+        
+    }
+}
+  
+  .slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .card {
+    min-width: calc(100% / 3);
+    background-color: #f5f5f5;
+    margin: 0 15px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    height: 560px;
+  }
+ 
+.card a {
+  text-decoration: none;
+}
+
+.card a button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card a button:hover {
+  background-color: #6c6a6a;
+  color: #fff;
+}
+
+@media (max-width: 430px) {
+  .card a {
+    width: 100%;
+    padding: 15px;
+  }
+}
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px 16px 0 0; /* ataca los dos bordes de la parte superior del img */
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .card p {
+    color: #555;
+    font-size: 1.125rem;
+    line-height: 1.333;
+    margin-bottom: 24px;
+    padding: 11px;
+  }
+  
+  .card button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    padding: 20px 28px 0px;
+  }
+  
+  .slider-controls .prev, .slider-controls .next {
+  margin: 0 10px;
+  background-color: #030403;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer;
+
+  }
+
+  .slider-controls .next:hover{
+    background: #07e207;
+  }
+
+  .slider-controls .next{
+    margin-right: 0;
+  }
+
+
+  /*  DESABILITAR botones al llegar a la ultima card */
+  
+  .prev:disabled, .next:disabled {
+    background-color: gray; /* cuando está deshabilitado */
+    cursor: not-allowed; /* cambia el cursor para indicar que está deshabilitado */
+  }
+  
+  .prev-icon, .next-icon {
+    font-size: 20px;
+    transform: rotate(90deg); /* Rota el ícono */
+
+  }
+  
+  /* rotar el ícono */
+  .prev-icon.rotated {
+    transform: rotate(270deg);
+  }
+  
+  @media screen and (max-width: 430px) {
+    .card {
+      min-width: 100%;
+    }
+    
+  
+    .left-panel h2 {
+      font-size: 1rem;
+      margin-bottom: 42rem;
+      position: fixed;
+      
+    }
+  }
+
+  @media (min-width: 430px) {
+    .left-panel h2 {
+        align-items: flex-start;
+        padding-left: 12px;
+        width: 43.8%;
+    }
+}
+  
