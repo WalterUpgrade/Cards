@@ -15,7 +15,6 @@ const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
 
-  // Información para cada card
   const cardsData = [
     {
       image: bike,
@@ -81,7 +80,7 @@ const Slider = () => {
     const updateCardWidth = () => {
       const cardElement = document.querySelector('.card');
       if (cardElement) {
-        // incluimos márgenes en el cálculo del ancho
+        // márgenes en el cálculo del ancho
         const cardStyle = window.getComputedStyle(cardElement);
         const marginLeft = parseFloat(cardStyle.marginLeft);
         const marginRight = parseFloat(cardStyle.marginRight);
